@@ -1,0 +1,50 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Timestamp Microservice FCC
+    
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    
+    //if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+
+  body
+    div.container
+      block content
+
+    script(src='/js/jquery.min.js')
+    script(src='/js/bootstrap.min.js')
+
+block content
+  .row
+    .col-md-6
+    h1 API Basejump: #{name} 
+    .col-md-12
+    hr
+    blockquote
+     h3 User stories:
+    ol
+    li I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
+    li If it does, it returns both the Unix timestamp and the natural language form of that date.
+    li If it does not contain a date or Unix timestamp, it returns null for those properties.
+    hr
+    .col-md-8
+    h2 Example usage:
+        code https://timestamp-ms.herokuapp.com/December%2015,%202015
+        code https://timestamp-ms.herokuapp.com/1450137600
+
+    h2 Example output:
+    code { "unix": 1450137600, "natural": "December 15, 2015" }
+    
